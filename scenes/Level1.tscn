@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[sub_resource type="PlaneMesh" id=1]
+
+[sub_resource type="SphereMesh" id=2]
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.831373, 0.121569, 0.121569, 1 )
+
+[node name="Level1" type="Spatial"]
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.98746, -0.0234505, -0.156119, 0.0257558, 0.999587, 0.0127594, 0.155755, -0.0166203, 0.987656, -0.853206, 1.01502, 17.6467 )
+
+[node name="Géometry" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.06892, 0 )
+
+[node name="sol" type="MeshInstance" parent="Géometry"]
+transform = Transform( 15.8742, 0, -2.87195, 0, 3.22638, 0, 2.87195, 0, 15.8742, 0, -2.04306, 0 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="balle" type="MeshInstance" parent="Géometry"]
+mesh = SubResource( 2 )
+material/0 = SubResource( 3 )
